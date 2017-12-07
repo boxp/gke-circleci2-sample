@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: sample
-        image: asia.gcr.io/my-project-id/sample:${CIRCLE_SHA1}
+        image: asia.gcr.io/${PROJECT_NAME}/sample:${CIRCLE_SHA1} # asia.gcr.io/my-project-id/sample:${CIRCLE_SHA1}
         ports:
         - containerPort: 80
