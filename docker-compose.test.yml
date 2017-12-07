@@ -2,5 +2,4 @@ version: "2"
 services:
   sample:
     image: asia.gcr.io/${PROJECT_NAME}/sample:$CIRCLE_SHA1
-    # 今回は必要ないが、ここでテストを実行する
-    # command: /bin/bash -c "make test"
+    command: /bin/bash -c "nginx -t -c /etc/nginx/nginx.conf"
