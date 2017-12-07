@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta2
+kind: Deployment
+metadata:
+  name: sample
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - name: sample
+        image: asia.gcr.io/my-project-id/sample:${CIRCLE_SHA1}
+        ports:
+        - containerPort: 80
