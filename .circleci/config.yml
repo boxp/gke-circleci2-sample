@@ -3,8 +3,8 @@ jobs:
   build:
     working_directory: /app
     environment:
-      PROJECT_NAME: my-project-id
-      CLUSTER_NAME: my-cluster-name
+      PROJECT_NAME: boxp-tk # my-project-id
+      CLUSTER_NAME: alice # my-cluster-name
       CLOUDSDK_COMPUTE_ZONE: asia-northeast1-a
       DEBIAN_FRONTEND: noninteractive
       GOOGLE_APPLICATION_CREDENTIALS: ${HOME}/account-auth.json
